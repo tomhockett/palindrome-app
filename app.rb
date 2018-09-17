@@ -1,5 +1,17 @@
 require 'sinatra'
+require 'rerun'
 
 get '/' do
-  'hello world!'
+  @title = 'Home'
+  erb :index
+end
+
+get '/about' do
+  @title = 'About'
+  erb :about
+end
+
+get '/palindrome' do
+  @title = 'Palindrome Detector'
+  erb :palindrome
 end
